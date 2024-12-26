@@ -1,6 +1,6 @@
 # File Sharing Frontend
 
-This is the frontend of the **5 Minute File Share** application, built using React. The application allows users to upload files, retrieve files via unique IDs, and download them seamlessly within the 5 minute expiry window. The frontend communicates with a backend API [File Sharing Frontend](https://github.com/JaakkoLipp/send-backend) to handle file storage and retrieval.
+This is the frontend of the **5 Minute File Share** application, built using React. The application allows users to upload files, retrieve files via unique IDs, and download them seamlessly within the 5 minute expiry window. The frontend communicates with a [File Sharing backend API](https://github.com/JaakkoLipp/send-backend) to handle file storage and retrieval.
 
 
 ## Features
