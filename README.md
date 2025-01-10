@@ -1,8 +1,7 @@
 # File Sharing Frontend
 
-This is the frontend of the **5 Minute File Share** application, built using React. The application allows users to upload files, retrieve files via unique IDs, and download them seamlessly within the 5 minute expiry window. The frontend communicates with a backend API (https://github.com/JaakkoLipp/send-backend) to handle file storage and retrieval.
+This is the frontend of the **5 Minute File Share** application, built using React. The application allows users to upload files, retrieve files via unique IDs, and download them seamlessly within the 5 minute expiry window. The frontend communicates with a [File Sharing backend API](https://github.com/JaakkoLipp/send-backend) to handle file storage and retrieval.
 
----
 
 ## Features
 
@@ -12,7 +11,6 @@ This is the frontend of the **5 Minute File Share** application, built using Rea
 - **Maximum File Size**: Enforces a file size limit (e.g., 5MB) with validation both on the client and server.
 - **Consistent UI**: Styled "Browse" and "Upload" buttons for a clean and user-friendly experience.
 
----
 
 ## Tech Stack
 
@@ -20,7 +18,6 @@ This is the frontend of the **5 Minute File Share** application, built using Rea
 - **Fetch API**: Used to make API calls to the backend for uploading and downloading files.
 - **CSS**: For styling components and ensuring consistent UI.
 
----
 
 ## Installation
 
@@ -45,7 +42,6 @@ Follow these steps to set up the project locally:
    ```
    The app will be available at [http://localhost:3000](http://localhost:3000).
 
----
 
 ## Usage
 
@@ -59,7 +55,6 @@ Follow these steps to set up the project locally:
    - Enter the unique file ID in the text input.
    - Click "Download" to retrieve the file from the server.
 
----
 
 ## Project Structure
 
@@ -74,7 +69,6 @@ src/
 └── index.js                 # React DOM rendering
 ```
 
----
 
 ## Environment Variables
 
@@ -88,7 +82,6 @@ Create a `.env` file in the project root:
 REACT_APP_BACKEND_URL=http://localhost:5000
 ```
 
----
 
 ## API Endpoints
 
@@ -102,7 +95,6 @@ REACT_APP_BACKEND_URL=http://localhost:5000
   - **Method**: `GET`
   - **URL**: `/api/files/download/:fileId`
 
----
 
 ## To-Do Features
 
@@ -111,13 +103,10 @@ REACT_APP_BACKEND_URL=http://localhost:5000
 - Implement file preview for certain file types (e.g., images, PDFs).
 - Enhance the UI for mobile responsiveness.
 
----
 
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
-
----
 
 ## License
 
