@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import UploadFile from "./Upload";
-import DownloadFile from "./Download";
+import Navbar from "./Navbar";
 
 // TODO: add .env address for backend
 
@@ -21,10 +20,10 @@ const App = () => {
     }
   };
 
+  // status check interval effect
   useEffect(() => {
     checkServiceStatus();
   }, []);
-
   useEffect(() => {
     const interval = setInterval(() => {
       console.log("Checking service status...");
@@ -35,15 +34,25 @@ const App = () => {
   }, []);
 
   return (
-    <div>
-      <h1>5 Minute File Share</h1>
-      {!serviceAvailable && (
-        <h3 style={{ color: "red" }}>Service Unavailable</h3>
-      )}
-      <UploadFile />
-      <hr />
-      <DownloadFile />
-    </div>
+    <>
+      <Navbar />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <hr />
+        {serviceAvailable ? (
+          <h3 style={{ color: "green" }}>Service Online</h3>
+        ) : (
+          <h3 style={{ color: "red" }}>Service Unavailable</h3>
+        )}
+      </div>
+    </>
   );
 };
 

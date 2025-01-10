@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 const DownloadFile = () => {
   const [fileId, setFileId] = useState("");
@@ -51,17 +52,28 @@ const DownloadFile = () => {
     }
   };
   return (
-    <div>
-      <h2>Download File</h2>
-      <input
-        type="text"
-        placeholder="Enter File ID"
-        value={fileId}
-        onChange={handleFileIdChange}
-      />
-      <button onClick={handleDownload}>Download</button>
-      <p>{message}</p>
-    </div>
+    <>
+      <Navbar />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <h2>Download File</h2>
+        <input
+          type="text"
+          placeholder="Enter File ID"
+          value={fileId}
+          onChange={handleFileIdChange}
+        />
+        <button onClick={handleDownload}>Download</button>
+        <p>{message}</p>
+      </div>
+    </>
   );
 };
 

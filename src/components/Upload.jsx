@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Navbar from "./Navbar";
 
 const UploadFile = () => {
   const [file, setFile] = useState(null);
@@ -37,12 +38,23 @@ const UploadFile = () => {
   };
 
   return (
-    <div>
-      <h2>Upload File</h2>
-      <input type="file" onChange={handleFileChange} />
-      <button onClick={handleUpload}>Upload</button>
-      <p>{message}</p>
-    </div>
+    <>
+      <Navbar />
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          justifyContent: "center",
+          height: "100vh",
+        }}
+      >
+        <h2>Upload File</h2>
+        <input type="file" onChange={handleFileChange} />
+        <button onClick={handleUpload}>Upload</button>
+        <p>{message}</p>
+      </div>
+    </>
   );
 };
 
